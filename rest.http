@@ -1,0 +1,4 @@
+GET http://localhost:3000
+
+###send error http
+GET http://localhost:3000/abc_xyz
