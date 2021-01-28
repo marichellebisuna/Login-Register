@@ -4,13 +4,7 @@ const createError = require('http-errors');
 require('dotenv').config();
 require('./helpers/init_mongodb');
 const AuthRoute = require('./Routes/Auth.route');
-const client = require('./helpers/init_redis');
-
-client.SET('foo', 'bar');
-client.GET('foo', (err, value) => {
-  if (err) console.log(err.message);
-  console.log(value);
-});
+require('./helpers/init_redis');
 
 const { verifyAccessToken } = require('./helpers/jwt_helper');
 
