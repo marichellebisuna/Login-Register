@@ -4,6 +4,7 @@ const createError = require('http-errors');
 require('dotenv').config();
 require('./helpers/init_mongodb');
 const AuthRoute = require('./Routes/Auth.route');
+require('./helpers/generate_keys');
 
 const app = express();
 app.use(morgan('dev'));
