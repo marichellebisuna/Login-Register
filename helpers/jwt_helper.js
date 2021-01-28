@@ -1,6 +1,5 @@
 const JWT = require('jsonwebtoken');
 const createError = require('http-errors');
-const { NetworkAuthenticationRequire } = require('http-errors');
 
 module.exports = {
   signAccessToken: (userId) => {
@@ -8,7 +7,7 @@ module.exports = {
       const payload = {};
       const secret = process.env.ACCESS_TOKEN_SECRET;
       const options = {
-        expiresIn: '5h',
+        expiresIn: '15s',
         issuer: 'mywebsite.com',
         audience: userId,
       };
@@ -60,6 +59,21 @@ module.exports = {
           resolve(token);
         }
       });
+    });
+  },
+
+  verifyRefreshToken: (refreshToken) => {
+    return new Promise((resolve, reject) => {
+      JWT.verify(
+        refreshToken,
+        process.env.REFRESH_TOKEN_SECRET,
+        (err, payload) => {
+          if (err) return reject(createError.Unauthorized());
+          const userId = payload.aud;
+
+          resolve(userId);
+        }
+      );
     });
   },
 };
