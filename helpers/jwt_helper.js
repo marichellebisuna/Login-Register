@@ -8,7 +8,7 @@ module.exports = {
       const payload = {};
       const secret = process.env.ACCESS_TOKEN_SECRET;
       const options = {
-        expiresIn: '5s',
+        expiresIn: '5h',
         issuer: 'mywebsite.com',
         audience: userId,
       };
@@ -39,6 +39,27 @@ module.exports = {
       }
       req.payload = payload;
       next();
+    });
+  },
+
+  signRefreshToken: (userId) => {
+    return new Promise((resolve, reject) => {
+      const payload = {};
+      const secret = process.env.REFRESH_TOKEN_SECRET;
+      const options = {
+        expiresIn: '1y',
+        issuer: 'mywebsite.com',
+        audience: userId,
+      };
+
+      JWT.sign(payload, secret, options, (err, token) => {
+        if (err) {
+          //return reject(err);
+          return reject(createError.InternalServerError());
+        } else {
+          resolve(token);
+        }
+      });
     });
   },
 };

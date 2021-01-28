@@ -1,5 +1,5 @@
 GET http://localhost:3000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4MTQzOTMsImV4cCI6MTYxMTgzMjM5MywiYXVkIjoiNjAxMjJhOGRmNjcyZDAyZWM0Y2Q1YWEzIiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9.tWktoJtKoPytebHHYW6U4h-yeGDxaeBkh6E2RqfWs58
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4MTQ3NDEsImV4cCI6MTYxMTgxNDc0NiwiYXVkIjoiNjAxMjJhOGRmNjcyZDAyZWM0Y2Q1YWEzIiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9.Z8N6QqT8rxZ3MiXIko_mfiA3dq4fj0b0NO615MjdrXY
 
 ###send error http
 GET http://localhost:3000/abc_xyz
@@ -18,7 +18,7 @@ POST http://localhost:3000/auth/register
 Content-Type:application/json
 
 {
- "email": "janedoe@yahoo.com",
+ "email": "newuser@yahoo.com",
  "password": "123456"
 }
 
