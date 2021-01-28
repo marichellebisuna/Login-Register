@@ -1,4 +1,5 @@
 GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4MTQzOTMsImV4cCI6MTYxMTgzMjM5MywiYXVkIjoiNjAxMjJhOGRmNjcyZDAyZWM0Y2Q1YWEzIiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9.tWktoJtKoPytebHHYW6U4h-yeGDxaeBkh6E2RqfWs58
 
 ###send error http
 GET http://localhost:3000/abc_xyz
@@ -8,7 +9,7 @@ POST http://localhost:3000/auth/login
 Content-Type:application/json
 
 {
- "email": "janedoeeeeJWTy@yahoo.com",
+ "email": "johndoe@yahoo.com",
  "password": "123456"
 }
 
@@ -17,7 +18,7 @@ POST http://localhost:3000/auth/register
 Content-Type:application/json
 
 {
- "email": "janedoeeeeJWTy@yahoo.com",
+ "email": "janedoe@yahoo.com",
  "password": "123456"
 }
 

@@ -4,8 +4,7 @@
   "description": "Node JS API Authentication",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "dev": "nodemon ./helpers/generate_keys.js"
+    "start": "nodemon app.js"
   },
   "author": "Mrs Marichelle Bisuna",
   "license": "MIT",

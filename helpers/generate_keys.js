@@ -1,5 +1,6 @@
 //to generate your own keygen
 const crypto = require('crypto');
+const { nextTick } = require('process');
 
 const key1 = crypto.randomBytes(32).toString('hex');
 const key2 = crypto.randomBytes(32).toString('hex');
