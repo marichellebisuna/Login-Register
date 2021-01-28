@@ -5,13 +5,19 @@ GET http://localhost:3000/abc_xyz
 
 ###login route
 POST http://localhost:3000/auth/login
+Content-Type:application/json
+
+{
+ "email": "janedoeeeeJWTy@yahoo.com",
+ "password": "123456"
+}
 
 ###register route
 POST http://localhost:3000/auth/register
 Content-Type:application/json
 
 {
- "email": "janedoeeeert@yahoo.com",
+ "email": "janedoeeeeJWTy@yahoo.com",
  "password": "123456"
 }
 
